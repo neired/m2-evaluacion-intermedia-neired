@@ -1,8 +1,30 @@
-@import 'core/settings';
-@import 'core/links';
-
 body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
+	background: lightgrey;
 	margin: 0;
 	height: 100vh;
+}
+.page {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page:first-letter, .title:first-letter, .text:first-letter, .btn:first-letter {
+  text-transform: capitalize;
+}
+.clue {
+  color: rgb(0, 14, 216);
+  border: rgb(0, 14, 216) 1px solid;
+  width: 80vw;
+  text-align: center;
+}
+.counter {
+  color: red;
+  font-family: sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
