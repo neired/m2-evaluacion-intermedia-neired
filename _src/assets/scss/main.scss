@@ -1,4 +1,4 @@
-body {
+.body {
 	background: lightgrey;
 	margin: 0;
 	height: 100vh;
@@ -9,22 +9,43 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-.page:first-letter, .title:first-letter, .text:first-letter, .btn:first-letter {
+.title {
+  margin-top: 50px;
+}
+.text {
+  margin-top: 100px;
+}
+.page:first-letter, .title:first-letter, .text:first-letter, .btn:first-letter, .clue:first-letter {
   text-transform: capitalize;
 }
 .clue {
-  color: rgb(0, 14, 216);
-  border: rgb(0, 14, 216) 1px solid;
+  color: blue;
+  border: blue 1px solid;
   width: 80vw;
   text-align: center;
+  height: 30px;
+  padding-top: 13px;
+  position: absolute;
+  bottom: 30px;
 }
 .counter {
   color: red;
   font-family: sans-serif;
   font-size: 70px;
-  font-weight: 700;
+  font-weight: 500;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 30px;
+  top: 30px;
+}
+.btn {
+  background: white;
+  border-radius: 5px;
+  border: none;
+  height: 20px;
+  width: 170px;
+  margin-top: 20px;
+}
+.try{
+  text-transform: capitalize;
+  font-style: italic;
 }
