@@ -9,26 +9,23 @@ const myRandomNumber = getRandomNumber(100);
 console.log(`Mi número aleatorio es ${myRandomNumber}`);
 
 // Al pulsar el botón de "prueba", acceder al contenido del input y mostrarlo en la consola
+//Comparar el número que el usuario ha escrito en el input con el número aleatorio, y pintar el feedback
 const btn = document.querySelector('.btn');
 const input = document.querySelector('.input');
+const clue = document.querySelector('.clue');
 
-function showConsole(event){
+function compareNumbers(event) {
   console.log(input.value);
-}
-
-btn.addEventListener('click',showConsole);
-
-// 4. comparar el número que el usuario ha escrito en el input con el número aleatorio, y pintar el feedback
-// correspondiente en la pantalla ("demasiado alto", "demasiado bajo", "¡HAS GANADO, CAMPEONA!")
-const clue = do
-function compareNumbers {
-  if (input.value === myRandomNumber){
-    "¡HAS GANADO, CAMPEONA!"
-  } else if {
-    "demasiado alto"
+  if (input.value > myRandomNumber) {
+    clue.innerHTML = 'demasiado alto';
+  } else if (input.value < myRandomNumber) {
+    clue.innerHTML = 'demasiado bajo';
   } else {
-    "demasiado bajo"
+    clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
   }
 }
+
+btn.addEventListener('click',compareNumbers);
+
 // 5. actualizar el contador de intentos cada vez que el usuario pruebe
 
