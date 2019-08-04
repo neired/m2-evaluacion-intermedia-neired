@@ -1,51 +1,56 @@
 .body {
-	background: lightgrey;
 	margin: 0;
-	height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, salmon, rgb(223, 223, 63));
 }
 .page {
-  font-family: sans-serif;
+  font-family: 'Lacquer', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 500px;
+  border: 1px black solid;
+  border-radius: 15px;
+  background: white;
 }
-.title {
-  margin-top: 50px;
-}
-.text {
-  margin-top: 100px;
-}
+
 .page:first-letter, .title:first-letter, .text:first-letter, .btn:first-letter, .clue:first-letter {
   text-transform: capitalize;
 }
 .clue {
   color: blue;
   border: blue 1px solid;
-  width: 80vw;
   text-align: center;
-  height: 30px;
-  padding-top: 13px;
-  position: absolute;
-  bottom: 30px;
+  padding: 13px 13px;
 }
 .counter {
   color: red;
   font-family: sans-serif;
   font-size: 70px;
   font-weight: 500;
-  position: absolute;
-  right: 30px;
-  top: 30px;
+  font-family: 'Lacquer', sans-serif;
 }
 .btn, .reset-btn {
-  background: white;
   border-radius: 5px;
   border: none;
-  height: 20px;
+  height: 30px;
   width: 140px;
   margin-top: 20px;
+  font-family: 'Lacquer', sans-serif;
+  cursor: pointer;
+  &:hover{
+    background-image: linear-gradient(to bottom right, salmon, rgb(223, 223, 63));
+  }
 }
 .try{
   text-transform: capitalize;
   font-style: italic;
+}
+.input{
+  font-family: 'Lacquer', sans-serif;
 }
