@@ -22,7 +22,7 @@ function compareNumbers(event) {
   } else if (input.value < myRandomNumber && input.value >= 1) {
     clue.innerHTML = 'demasiado bajo';
   } else if (input.value === '') {
-    clue.innerHTML = '¿qué tal si pruebas con un número de verdad?'
+    clue.innerHTML = '¿qué tal si pruebas con un número de verdad?';
   } else if (input.value < 1 || input.value > 100) {
     clue.innerHTML = 'el número introducido debe estar comprendido entre el 1 y el 100';
   } else {
@@ -37,7 +37,7 @@ function compareWithEnter() {
     compareNumbers();
     countTries();
   }
-};
+}
 input.addEventListener('keypress', compareWithEnter);
 
 //Actualizar el contador de intentos cada vez que el usuario pruebe
@@ -55,6 +55,12 @@ function resetGame (event) {
   input.value = '';
   counter.innerHTML = 0;
   clue.innerHTML = 'Escribe un número y dale a Prueba';
-};
+}
 
 reset.addEventListener('click', resetGame);
+
+//Añadir un intervalo por si el jugador se ha sobao
+const checkIfPlayerIsAlive = () => {
+  clue.innerHTML = '¿Sigues vivo? Porque el juego no es tan difícil...';
+};
+setTimeout(checkIfPlayerIsAlive, 10000);
